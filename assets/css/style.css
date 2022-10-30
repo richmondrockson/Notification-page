@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: grey;
+  font-weight: 500;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 750px;
+  height: 100vh;
+  margin: 30px auto;
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+header span {
+  background-color: hsl(219, 85%, 26%);
+  color: white;
+  padding: 2px 12px;
+  border-radius: 5px;
+}
+
+header p {
+  font-weight: 500;
+}
+
+header p:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  margin: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.unread {
+  background-color: hsl(210, 60%, 98%);
+}
+
+.alertBtn {
+  display: flex;
+}
+
+.unread p:first-of-type::after {
+  content: " ";
+  background-color: red;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.item img {
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.item p {
+  margin-top: 30px;
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+}
+
+.time {
+  color: grey;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.name {
+  font-weight: 800;
+  padding-right: 5px;
+  color: black;
+}
+
+.name:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.post {
+  color: hsl(219, 12%, 42%);
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.unread .post:hover {
+  color: hsl(219, 85%, 26%);
+}
+
+.message {
+  width: 70%;
+  margin-left: 120px;
+  margin-top: -20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  font-size: 15px;
+}
+
+.message:hover {
+  background-color: hsl(211, 68%, 94%);
+}
+
+@media only screen and (max-device-width: 375px) {
+  body {
+    font-size: 12px;
+    width: 375px;
+  }
+
+  .post,
+  .message {
+    font-size: 12px;
+  }
+
+  .item {
+    margin: 10px;
+  }
+
+  .item img {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+  }
+
+  .item p {
+    margin-top: 15px;
+  }
+
+  .time {
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .message {
+    margin-left: 80px;
+    padding: 10px;
+    font-size: 12px;
+  }
+}
